@@ -8,14 +8,12 @@ RayTracer::RayTracer(nlohmann::json& j){
     
     int dimX = 800;
     int dimY = 600;
-    int w = 100;
     
-    std::vector<double> buffer = set_buffer(dimX, dimY, w);
     std::string filename = parse_filename(j);
 
 
 
-    sv_ppm(filename, buffer, dimX, dimY);
+    sv_ppm(filename, dimX, dimY);
     
 }
 
